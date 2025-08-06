@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Questionário - Partes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background-color: #f9f9f9;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    table {
+      width: 100%;
+      max-width: 800px;
+      margin: auto;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 12px;
+      border-bottom: 1px solid #ccc;
+      text-align: left;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    button {
+      padding: 6px 12px;
+      cursor: pointer;
+      border: none;
+      border-radius: 4px;
+      background-color: #e0e0e0;
+    }
+
+    .done {
+      background-color: #4CAF50 !important;
+      color: white;
+    }
+
+    /* Responsivo */
+    @media (max-width: 600px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+      }
+
+      thead {
+        display: none;
+      }
+
+      tr {
+        margin-bottom: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        padding: 1rem;
+        background-color: white;
+      }
+
+      td {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 0;
+      }
+
+      td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        flex-basis: 40%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<h1>ergoUX</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parte</th>
+      <th>Link</th>
+      <th>Concluído</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Parte">Parte 1</td>
+      <td data-label="Link"><a href="https://ds.brainanswer.pt/session/?share=y9ybruk6ya3"_blank" target="_blank">Aceder</a></td>
+      <td data-label="Concluído"><button onclick="toggleDone(this)">Marcar como feito</button></td>
+    </tr>
+    <tr>
+      <td data-label="Parte">Parte 2</td>
+      <td data-label="Link"><a href="https://ds.brainanswer.pt/session/?share=njpxoaxd4lv" target="_blank">Aceder</a></td>
+      <td data-label="Concluído"><button onclick="toggleDone(this)">Marcar como feito</button></td>
+    </tr>
+    <tr>
+      <td data-label="Parte">Parte 3</td>
+      <td data-label="Link"><a href="https://ds.brainanswer.pt/session/?share=5vk4r51sg7g" target="_blank">Aceder</a></td>
+      <td data-label="Concluído"><button onclick="toggleDone(this)">Marcar como feito</button></td>
+    </tr>
+    <tr>
+      <td data-label="Parte">Parte 4</td>
+      <td data-label="Link"><a href="https://ds.brainanswer.pt/session/?share=fraa02dy8kk"target="_blank">Aceder</a></td>
+      <td data-label="Concluído"><button onclick="toggleDone(this)">Marcar como feito</button></td>
+    </tr>
+    <tr>
+      <td data-label="Parte">Parte 5</td>
+      <td data-label="Link"><a href="https://ds.brainanswer.pt/session/?share=vx1xovn8281" target="_blank">Aceder</a></td>
+      <td data-label="Concluído"><button onclick="toggleDone(this)">Marcar como feito</button></td>
+    </tr>
+    <tr>
+      <td data-label="Parte">Parte 6</td>
+      <td data-label="Link"><a href="https://ds.brainanswer.pt/session/?share=uvaa88evk95" target="_blank">Aceder</a></td>
+      <td data-label="Concluído"><button onclick="toggleDone(this)">Marcar como feito</button></td>
+    </tr>
+    <tr>
+      <td data-label="Parte">Parte 7</td>
+      <td data-label="Link"><a href="https://ds.brainanswer.pt/session/?share=04vdsy18jta" target="_blank">Aceder</a></td>
+      <td data-label="Concluído"><button onclick="toggleDone(this)">Marcar como feito</button></td>
+    </tr>
+    <tr>
+      <td data-label="Parte">Parte 8</td>
+      <td data-label="Link"><a href="https://ds.brainanswer.pt/session/?share=n3s2yay838j" target="_blank">Aceder</a></td>
+      <td data-label="Concluído"><button onclick="toggleDone(this)">Marcar como feito</button></td>
+    </tr>
+  </tbody>
+</table>
+
+<script>
+  function toggleDone(button) {
+    button.classList.toggle("done");
+    button.textContent = button.classList.contains("done") ? "Feito" : "Marcar como feito";
+  }
+</script>
+
+</body>
+</html>
